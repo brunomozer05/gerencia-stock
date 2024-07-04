@@ -6,13 +6,13 @@ CREATE TABLE usuarios (
 );
 
 INSERT INTO usuarios (nome, quantidade, info) VALUES
-    ('Geladeira Frost Free Brastemp', '5', 'Dísponivel'),
-    ('Ar Condicionado Split Electrolux', '8', 'Dísponivel'),
-    ('Freezer Horizontal Consul', '3', 'Dísponivel'),
-    ('Cervejeira Consul Mais', '2', 'Dísponivel'),
-    ('Frigobar Brastemp Retrô', '6', 'Dísponivel'),
-    ('Ar Condicionado Janela Springer Midea', '4', 'Dísponivel'),
-    ('Refrigerador Electrolux Duplex', '7', 'Dísponivel'),
-    ('Freezer Vertical Esmaltec', '3', 'Dísponivel'),
-    ('Geladeira Panasonic Frost Free', '5', 'Dísponivel'),
-    ('Ar Condicionado Portátil Philco', '2', 'Dísponivel');
+    ('Geladeira Brastemp', '5', 'Indisponível'),
+    ('Ar Split Electrolux', '8', 'Disponível'),
+    ('Freezer Consul', '3', 'Indisponível'),
+    ('Cervejeira Consul', '2', 'Indisponível'),
+    ('Frigobar Brastemp', '6', 'Disponível'),
+    ('Ar Janela Midea', '4', 'Indisponível'),
+    ('Refrigerador Electrolux', '7', 'Disponível'),
+    ('Freezer Esmaltec', '3', 'Indisponível'),
+    ('Geladeira Panasonic', '5', 'Disponível'),
+    ('Ar Portátil Philco', '2', 'Indisponível');

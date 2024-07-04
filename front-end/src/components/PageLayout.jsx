@@ -2,27 +2,34 @@ import React, { useState } from "react";
 import {
   IdcardOutlined,
   TeamOutlined,
+  BarChartOutlined,
 } from "@ant-design/icons";
 import { Layout, Menu, theme } from "antd";
 import { useNavigate } from "react-router-dom";
 
 const items = [
   {
-    icon: <TeamOutlined />,
+    icon: <BarChartOutlined />,
     label: "Dashboard",
     key: "1",
     target: "/dashboard",
   },
   {
     icon: <TeamOutlined />,
-    label: "Estoque",
+    label: "Estado do Estoque",
     key: "2",
+    target: "/disponibilidade",
+  },
+  {
+    icon: <TeamOutlined />,
+    label: "Estoque",
+    key: "3",
     target: "/produtos",
   },
   {
     icon: <IdcardOutlined />,
     label: "Cadastro",
-    key: "3",
+    key: "4",
     target: "/cadastro",
   },
 ];
@@ -58,6 +65,7 @@ const PageLayout = ({ children }) => {
       >
         <div className="demo-logo-vertical" />
         <img
+          src="https://github.com/brunomozer05/gerencia-stock/blob/main/front-end/public/icon.png?raw=true"
           width={70}
           style={{ marginLeft: "3px" }}
         />
@@ -87,8 +95,7 @@ const PageLayout = ({ children }) => {
           style={{
             textAlign: "center",
           }}
-        >
-        </Footer>
+        ></Footer>
       </Layout>
     </Layout>
   );

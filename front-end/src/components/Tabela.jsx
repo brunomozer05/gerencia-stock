@@ -97,7 +97,7 @@ const Tabela = () => {
       <Table dataSource={filteredData}>
         <Column title="ID" dataIndex="id" key="id" />
         <Column title="Nome" dataIndex="nome" key="nome" />
-        <Column title="Status" dataIndex="info" key="info" /> 
+        <Column title="Status" dataIndex="info" key="info" />
         <Column title="Quantidade" dataIndex="quantidade" key="quantidade" />
         <Column
           title="Ação"

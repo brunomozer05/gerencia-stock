@@ -96,12 +96,16 @@ const FormInputs = ({ editingId }) => {
           ]}
         >
           <Input type="number" />
-
         </Form.Item>
         <Form.Item
           name="info"
           label="Status"
-          rules={[{ required: true, message: "Por favor escolha o Status do produto!" }]}
+          rules={[
+            {
+              required: true,
+              message: "Por favor escolha o Status do produto!",
+            },
+          ]}
         >
           <Select placeholder="escolha o status do produto">
             <Option value="Dísponivel">Dísponivel</Option>
