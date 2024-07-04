@@ -9,14 +9,20 @@ import { useNavigate } from "react-router-dom";
 const items = [
   {
     icon: <TeamOutlined />,
-    label: "Estoque",
+    label: "Dashboard",
     key: "1",
+    target: "/dashboard",
+  },
+  {
+    icon: <TeamOutlined />,
+    label: "Estoque",
+    key: "2",
     target: "/produtos",
   },
   {
     icon: <IdcardOutlined />,
     label: "Cadastro",
-    key: "2",
+    key: "3",
     target: "/cadastro",
   },
 ];
@@ -82,7 +88,6 @@ const PageLayout = ({ children }) => {
             textAlign: "center",
           }}
         >
-         ©2024 Created by Bruno Mozer
         </Footer>
       </Layout>
     </Layout>
