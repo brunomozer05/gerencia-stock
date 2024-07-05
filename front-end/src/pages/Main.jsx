@@ -87,7 +87,7 @@ const Main = () => {
         </Left2>
         <Right2>
           <Box1>
-            <img src="" alt="" />
+            <img src="https://raw.githubusercontent.com/brunomozer05/gerencia-stock/f52f3b020c5039021257e72186a693ca483ba217/front-end/public/img1.svg" alt="" />
           </Box1>
         </Right2>
       </Content2>
