@@ -36,7 +36,7 @@ const Dashboard = () => {
             textAlign: "center",
           }}
         >
-          <h1>Estado Estoque</h1>
+          <h1>Status de Estoque</h1>
         </Breadcrumb>
         <PieChart>
           <Pie dataKey="value" data={data} fill="#4D5FA9" label />

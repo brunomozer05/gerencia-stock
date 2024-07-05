@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Table, Space, Modal, Input } from "antd";
+import { Table, Space, Modal, Button } from "antd";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import FormInputs from "./FormInputs";
@@ -104,15 +104,22 @@ const Tabela = () => {
           key="action"
           render={(_, record) => (
             <Space size="middle">
-              <a
+              <Button
                 onClick={() => {
                   setEditModalOpen(true);
                   setEditingId(record.id);
                 }}
+                type="primary"
               >
                 Editar
-              </a>
-              <a onClick={() => showDeleteConfirm(record.id)}>Excluir</a>
+              </Button>
+              <Button
+                onClick={() => showDeleteConfirm(record.id)}
+                type="primary"
+                danger
+              >
+                Excluir
+              </Button>
             </Space>
           )}
         />

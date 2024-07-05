@@ -3,9 +3,10 @@ import {
   IdcardOutlined,
   TeamOutlined,
   BarChartOutlined,
+  PieChartOutlined,
 } from "@ant-design/icons";
 import { Layout, Menu, theme } from "antd";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Outlet } from "react-router-dom";
 
 const items = [
   {
@@ -15,8 +16,8 @@ const items = [
     target: "/dashboard",
   },
   {
-    icon: <TeamOutlined />,
-    label: "Estado do Estoque",
+    icon: <PieChartOutlined />,
+    label: "Status de Estoque",
     key: "2",
     target: "/disponibilidade",
   },
@@ -36,7 +37,7 @@ const items = [
 
 const { Header, Content, Footer, Sider } = Layout;
 
-const PageLayout = ({ children }) => {
+const PageLayout = () => {
   const [collapsed, setCollapsed] = useState(false);
   const {
     token: { colorBgContainer },
@@ -53,7 +54,6 @@ const PageLayout = ({ children }) => {
 
   return (
     <Layout
-      align="center"
       style={{
         minHeight: "100vh",
       }}
@@ -64,11 +64,13 @@ const PageLayout = ({ children }) => {
         onCollapse={(value) => setCollapsed(value)}
       >
         <div className="demo-logo-vertical" />
+        <a href="/main">
         <img
           src="https://github.com/brunomozer05/gerencia-stock/blob/main/front-end/public/icon.png?raw=true"
           width={70}
           style={{ marginLeft: "3px" }}
         />
+        </a>
         <Menu
           theme="dark"
           defaultSelectedKeys={["1"]}
@@ -89,15 +91,18 @@ const PageLayout = ({ children }) => {
             margin: "0 16px",
           }}
         >
-          {children}
+          <Outlet />
         </Content>
         <Footer
           style={{
             textAlign: "center",
           }}
-        ></Footer>
+        >
+          Footer Content
+        </Footer>
       </Layout>
     </Layout>
   );
 };
+
 export default PageLayout;
