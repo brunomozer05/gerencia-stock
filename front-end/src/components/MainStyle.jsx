@@ -16,8 +16,8 @@ export const Title = styled.div`
 `;
 
 export const Logo = styled.img`
-  width: 75px;
-  height: 75px;
+  width: 45px;
+  height: 45px;
 `;
 
 export const TitleText = styled.h1`
@@ -199,5 +199,5 @@ export const Bottom = styled.div`
   font-size: large;
   text-align: center;
   height: 10rem;
-  background-color: #ccd5fa;
+  background-color: #4d5fa9;
 `;

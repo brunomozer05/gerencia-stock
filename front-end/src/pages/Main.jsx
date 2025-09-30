@@ -92,11 +92,11 @@ const Main = () => {
         </Right2>
       </Content2>
       <Content3>
-        <p>Saiba Mais</p>
+        <p>Recursos que impulsionam o seu negócio</p>
         <Square>
-          <Left3></Left3>
-          <Mid3></Mid3>
-          <Right3></Right3>
+          <Left3><Logo src=""></Logo></Left3>
+          <Mid3><Logo src=""></Logo></Mid3>
+          <Right3><Logo src=""></Logo></Right3>
         </Square>
       </Content3>
       <Bottom>
