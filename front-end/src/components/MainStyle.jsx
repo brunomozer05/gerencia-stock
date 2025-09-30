@@ -16,15 +16,29 @@ export const Title = styled.div`
 `;
 
 export const Logo = styled.img`
-  width: 45px;
+  width: 35px;
   height: 45px;
 `;
+
+export const Logo1 = styled.img`
+  margin-top: 2rem;
+  width: 75px;
+  height: 75px;
+`
 
 export const TitleText = styled.h1`
   font-size: 2rem;
   font-weight: 700;
   margin-left: 10px;
 `;
+
+export const BottomTitleText = styled.h4`
+color: white;
+`
+export const BottomText = styled.p`
+color: white;
+font-weight: 400;
+`
 
 export const Controller = styled.div`
   display: flex;
@@ -174,6 +188,15 @@ export const Right3 = styled.div`
   border-radius: 15px;
 `;
 
+export const Info = styled.div`
+  width: 25rem;
+  height: 120%;
+  display:grid;
+  justify-content:center;
+
+
+`
+
 export const BlueInput = styled.input`
   background-color: #4d5fa9;
   border-radius: 15px;
@@ -200,4 +223,7 @@ export const Bottom = styled.div`
   text-align: center;
   height: 10rem;
   background-color: #4d5fa9;
+  display: flex;
+  align-items:center;
+  justify-content:space-evenly;
 `;

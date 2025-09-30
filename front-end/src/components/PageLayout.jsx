@@ -98,7 +98,7 @@ const PageLayout = () => {
             textAlign: "center",
           }}
         >
-          Footer Content
+          © 2025 GerenciaStock. Todos os direitos reservados.
         </Footer>
       </Layout>
     </Layout>

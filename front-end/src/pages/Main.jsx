@@ -3,6 +3,8 @@ import {
   Navbar,
   Title,
   Logo,
+  Info,
+  Logo1,
   TitleText,
   Controller,
   RegisterLink,
@@ -26,6 +28,8 @@ import {
   BlueInput,
   WhiteInput,
   Bottom,
+  BottomTitleText,
+  BottomText,
 } from "../components/MainStyle";
 
 const Main = () => {
@@ -42,7 +46,11 @@ const Main = () => {
           </TitleText>
         </Title>
         <Controller>
-          <RegisterLink style={{ color: "Black" ,textDecoration: 'none' }}  href="/dashboard" className="register">
+          <RegisterLink
+            style={{ color: "Black", textDecoration: "none" }}
+            href="/dashboard"
+            className="register"
+          >
             Registrar
           </RegisterLink>
         </Controller>
@@ -69,7 +77,7 @@ const Main = () => {
               <WhiteInput type="password" className="white" />
             </Inputs>
             <a href="/dashboard">
-            <SaibaButton type="submit">Entrar</SaibaButton>
+              <SaibaButton type="submit">Entrar</SaibaButton>
             </a>
             <p style={{ cursor: "pointer", color: "#4d5fa9", fontWeight: 500 }}>
               Esqueceu o seu usuário ou senha?
@@ -87,23 +95,46 @@ const Main = () => {
         </Left2>
         <Right2>
           <Box1>
-            <img src="https://raw.githubusercontent.com/brunomozer05/gerencia-stock/f52f3b020c5039021257e72186a693ca483ba217/front-end/public/img1.svg" alt="" />
+            <img
+              src="https://raw.githubusercontent.com/brunomozer05/gerencia-stock/f52f3b020c5039021257e72186a693ca483ba217/front-end/public/img1.svg"
+              alt=""
+            />
           </Box1>
         </Right2>
       </Content2>
       <Content3>
         <p>Recursos que impulsionam o seu negócio</p>
         <Square>
-          <Left3><Logo src=""></Logo></Left3>
-          <Mid3><Logo src=""></Logo></Mid3>
-          <Right3><Logo src=""></Logo></Right3>
+          <Left3>
+            <Logo1 src="https://raw.githubusercontent.com/brunomozer05/gerencia-stock/refs/heads/main/front-end/public/armazem.png"></Logo1>
+            <h5>Gestão Inteligente de estoque</h5>
+          </Left3>
+          <Mid3>
+            <Logo1 src="https://raw.githubusercontent.com/brunomozer05/gerencia-stock/refs/heads/main/front-end/public/negociacao.png"></Logo1>
+            <h5>Relátorios e Análises</h5>
+          </Mid3>
+          <Right3>
+            <Logo1 src="https://raw.githubusercontent.com/brunomozer05/gerencia-stock/refs/heads/main/front-end/public/rede-de-conexao.png"></Logo1>
+            <h5>Acesso de Qualquer Lugar</h5>
+          </Right3>
         </Square>
       </Content3>
       <Bottom>
-        <a href="https://github.com/brunomozer05/gerencia-stock">
-       <Logo src="https://seeklogo.com/images/G/github-logo-7880D80B8D-seeklogo.com.png">
-       </Logo>
-       </a>
+        <Info>
+          <BottomTitleText>Gerencia Stock</BottomTitleText>
+          <BottomText>Sobre nós</BottomText>
+        </Info>
+        <Info>
+          <BottomTitleText>Ajuda</BottomTitleText>
+          <BottomText>FAQ</BottomText>
+        </Info>
+        <Info>
+          <a href="https://github.com/brunomozer05/gerencia-stock">
+            <Logo src="https://raw.githubusercontent.com/brunomozer05/gerencia-stock/87736196ced3361ec2ae14509a9334c8519c9b8a/front-end/public/github.svg"></Logo>
+          </a>
+          <Logo src="https://raw.githubusercontent.com/brunomozer05/gerencia-stock/87736196ced3361ec2ae14509a9334c8519c9b8a/front-end/public/facebook.svg"></Logo>
+          <Logo src="https://raw.githubusercontent.com/brunomozer05/gerencia-stock/87736196ced3361ec2ae14509a9334c8519c9b8a/front-end/public/x.svg"></Logo>
+        </Info>
       </Bottom>
     </>
   );
