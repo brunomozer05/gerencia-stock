@@ -6,6 +6,7 @@ import PageLayout from "./components/PageLayout.jsx";
 import Main from "./pages/Main.jsx";
 import Dashboard from "./pages/Dashboard.jsx";
 import Disponibilidade from "./pages/Disponibilidade.jsx";
+import Registro from "./pages/Registro.jsx";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
           <Route path="produtos" element={<Produtos />} />
           <Route path="cadastro" element={<Cadastro />} />
         </Route>
+        <Route path="registro" element={<Registro/>} />
       </Routes>
     </BrowserRouter>
   );

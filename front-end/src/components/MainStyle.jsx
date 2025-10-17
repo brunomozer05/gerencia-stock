@@ -1,82 +1,144 @@
-import styled from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
+
+export const GlobalStyle = createGlobalStyle`
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+        color: #333;
+    }
+    h1, h2, h3, h4, h5, h6, p {
+        margin: 0;
+    }
+`;
 
 export const Navbar = styled.div`
   width: 100%;
-  height: 75px;
-  box-shadow: 1px -3px 10px #000000;
+  height: 80px; 
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-direction: row;
+  padding: 0 40px;
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 `;
 
 export const Title = styled.div`
   display: flex;
   align-items: center;
+  gap: 8px;
 `;
 
 export const Logo = styled.img`
-  width: 35px;
-  height: 45px;
+  width: 50px;
+  height: 50px;
 `;
-
-export const Logo1 = styled.img`
-  margin-top: 2rem;
-  width: 75px;
-  height: 75px;
-`
 
 export const TitleText = styled.h1`
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 700;
-  margin-left: 10px;
 `;
-
-export const BottomTitleText = styled.h4`
-color: white;
-`
-export const BottomText = styled.p`
-color: white;
-font-weight: 400;
-`
 
 export const Controller = styled.div`
   display: flex;
-  margin-right: 5rem;
+  align-items: center;
 `;
 
 export const RegisterLink = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 6rem;
-  height: 2rem;
-  background-color: #f3f3f3;
-  border-radius: 15px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.473);
-  font-weight: 500;
-  font-size: medium;
+  min-width: 120px;
+  height: 40px;
+  background-color: #4d5fa9; 
+  color: white !important; 
+  border-radius: 8px; 
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 6px rgba(77, 95, 169, 0.3);
+
+  &:hover {
+    background-color: #3a4b90;
+  }
 `;
+
 
 export const Content1 = styled.div`
   display: flex;
+  min-height: calc(100vh - 80px); 
+  width: 100%;
 `;
 
 export const Left1 = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 30%;
+  justify-content: center;
+  padding: 0 40px;
+  width: 40%;
+  box-sizing: border-box;
+`;
+
+export const HeroTitle = styled.h2`
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+  line-height: 1.2;
+`;
+
+export const Controller2 = styled.div`
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+`;
+
+const BaseButton = styled.button`
+  cursor: pointer;
+  min-width: 140px;
+  height: 45px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+`;
+
+export const DuvidaButton = styled(BaseButton)`
+  background-color: transparent;
+  border: 2px solid #4d5fa9;
+  color: #4d5fa9;
+
+  &:hover {
+    background-color: #4d5fa9;
+    color: white;
+  }
+`;
+
+export const SaibaButton = styled(BaseButton)`
+  background-color: #4d5fa9;
+  color: white;
+  box-shadow: 0 4px 8px rgba(77, 95, 169, 0.4);
+
+  &:hover {
+    background-color: #3a4b90;
+    box-shadow: 0 6px 10px rgba(77, 95, 169, 0.5);
+  }
 `;
 
 export const Right1 = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 70%;
-  height: 92vh;
+  width: 60%;
   background-color: #ccd5fa;
-  box-shadow: 0px 0px 0px 0px #000000;
+  padding: 40px;
+  box-sizing: border-box;
 `;
 
 export const Box = styled.div`
@@ -84,146 +146,212 @@ export const Box = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  width: 60%;
-  height: 75%;
-  border-radius: 15px;
+  padding: 40px 30px;
+  width: 100%;
+  max-width: 350px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+`;
+
+export const LoginTitle = styled.h1`
+  font-size: 2rem;
+  margin-bottom: 30px;
+  font-weight: 600;
 `;
 
 export const Inputs = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: 6rem;
-  margin-bottom: 7rem;
-`;
-
-export const Controller2 = styled.div`
-  width: 70%;
-  justify-content: space-evenly;
-  display: flex;
-`;
-
-export const DuvidaButton = styled.button`
-  cursor: pointer;
-  width: 8rem;
-  height: 3rem;
-  border-radius: 15px;
-  border: none;
-  background-color: #ccd5fa;
-  color: white;
-  font-size: larger;
+  gap: 15px;
+  width: 100%;
+  margin-bottom: 30px;
+  font-size: 1rem;
   font-weight: 500;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.473);
 `;
 
-export const SaibaButton = styled.button`
-  cursor: pointer;
-  width: 8rem;
-  height: 3rem;
-  border-radius: 15px;
-  border: none;
-  background-color: #4d5fa9;
-  color: white;
-  font-size: larger;
-  font-weight: 500;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.473);
+const BaseInput = styled.input`
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  height: 45px;
+  box-sizing: border-box;
+  margin-top: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+
+  &:focus {
+    outline: none;
+    border-color: #4d5fa9;
+  }
 `;
+
+export const BlueInput = styled(BaseInput)`
+  background-color: #e6eaff;
+  border-color: #c9d2f7;
+`;
+
+export const WhiteInput = styled(BaseInput)`
+  background-color: white;
+`;
+
+export const ForgotPassword = styled.p`
+  cursor: pointer;
+  color: #4d5fa9;
+  font-weight: 500;
+  font-size: 0.95rem;
+  margin-top: 15px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
 
 export const Content2 = styled.div`
-  margin-top: 10rem;
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
+  padding: 100px 40px;
+  gap: 50px;
 `;
 
 export const Left2 = styled.div`
-  font-size: xx-large;
+  max-width: 450px;
+  font-size: 2.2rem;
   font-weight: 700;
-  display: flex;
-  align-items: center;
+  line-height: 1.3;
 `;
 
 export const Right2 = styled.div`
   display: flex;
   align-items: center;
+  justify-content: center;
 `;
 
 export const Box1 = styled.div`
   background-color: #ccd5fa;
-  width: 50rem;
-  height: 50rem;
-  border-radius: 15px;
+  width: 400px;
+  height: 400px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+
+  & img {
+    max-width: 100%;
+    max-height: 100%;
+  }
 `;
 
+
 export const Content3 = styled.div`
-  font-size: xx-large;
-  font-weight: 700;
+  padding: 80px 40px;
+  background-color: #f8f9fa;
   text-align: center;
-  margin-top: 10rem;
-  display: flex;
-  flex-direction: column;
+`;
+
+export const Content3Title = styled.h3`
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 50px;
 `;
 
 export const Square = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
 `;
 
-export const Left3 = styled.div`
-  width: 20rem;
-  height: 20rem;
-  background-color: #ccd5fa;
-  border-radius: 15px;
+export const FeatureBox = styled.div`
+  width: 280px;
+  min-height: 250px;
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
 `;
 
-export const Mid3 = styled.div`
-  width: 20rem;
-  height: 20rem;
-  background-color: #ccd5fa;
-  border-radius: 15px;
+export const Logo1 = styled.img`
+  width: 70px;
+  height: 70px;
+  margin-top: 1rem;
+  margin-bottom: 15px;
 `;
 
-export const Right3 = styled.div`
-  width: 20rem;
-  height: 20rem;
-  background-color: #ccd5fa;
-  border-radius: 15px;
+export const FeatureText = styled.h5`
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #4d5fa9;
+  margin-top: 10px;
+`;
+
+
+export const Bottom = styled.div`
+  padding: 40px 40px;
+  background-color: #4d5fa9;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 30px;
+  flex-wrap: wrap;
 `;
 
 export const Info = styled.div`
-  width: 25rem;
-  height: 120%;
-  display:grid;
-  justify-content:center;
-
-
-`
-
-export const BlueInput = styled.input`
-  background-color: #4d5fa9;
-  border-radius: 15px;
-  border-style: none;
-  width: 15rem;
-  height: 2rem;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.473);
-`;
-
-export const WhiteInput = styled.input`
-  background-color: #f6f6f6;
-  border-radius: 15px;
-  border-style: none;
-  width: 15rem;
-  height: 2rem;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.473);
-`;
-
-export const Bottom = styled.div`
-  margin-top: 10rem;
-  padding: 5rem;
-  font-weight: 600;
-  font-size: large;
-  text-align: center;
-  height: 10rem;
-  background-color: #4d5fa9;
   display: flex;
-  align-items:center;
-  justify-content:space-evenly;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 150px;
+  gap: 8px;
+`;
+
+export const BottomTitleText = styled.h4`
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+`;
+
+export const BottomText = styled.p`
+  color: #c9d2f7;
+  font-weight: 400;
+  font-size: 0.95rem;
+  cursor: pointer;
+
+  &:hover {
+    color: white;
+  }
+`;
+
+export const SocialLinks = styled.div`
+  display: flex;
+  gap: 15px;
+
+  & a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  & ${Logo} {
+    width: 24px;
+    height: 24px;
+    filter: invert(100%); 
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
 `;
