@@ -1,45 +1,35 @@
 import {
-  GlobalStyle,
-  Container,
-  Title,
-  FormGroup,
-  Label,
-  Input,
-  Button,
-} from "../components/RegistroStyle";
+  LoginTitle,
+  Inputs,
+  SaibaButton,
+  BlueInput,
+  WhiteInput,
+} from "../components/MainStyle";
+
+import { GlobalStyle, Container } from "../components/RegistroStyle";
 
 const Registro = () => {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert("Submetendo registro (fiel à imagem)!");
-  };
-
   return (
     <>
       <GlobalStyle />
       <Container>
-        <Title>Registro</Title>
-        <form
-          onSubmit={handleSubmit}
-          style={{
-            width: "100%",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-          }}
+        <LoginTitle>Cadastrar</LoginTitle>
+        <Inputs>
+          <label htmlFor="user-input">Usuário</label>
+          <BlueInput id="user-input" type="text" />
+
+          <label htmlFor="pass-input">Senha</label>
+          <WhiteInput id="pass-input" type="password" />
+        </Inputs>
+
+        <a
+          href="/dashboard"
+          style={{ textDecoration: "none", width: "100%", maxWidth: "200px" }}
         >
-          <FormGroup>
-            <Label htmlFor="usuario">Usuário</Label>
-            <Input id="usuario" type="text" required />
-          </FormGroup>
-
-          <FormGroup>
-            <Label htmlFor="senha">Senha</Label>
-            <Input id="senha" type="password" required isPassword />
-          </FormGroup>
-
-          <Button type="submit">Cadastrar</Button>
-        </form>
+          <SaibaButton style={{ width: "100%", marginTop: 0 }} type="submit">
+            Entrar
+          </SaibaButton>
+        </a>
       </Container>
     </>
   );

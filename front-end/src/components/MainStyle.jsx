@@ -80,7 +80,7 @@ export const Left1 = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 40px;
+  padding: 0 100px;
   width: 40%;
   box-sizing: border-box;
 `;
@@ -135,7 +135,7 @@ export const Right1 = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 60%;
+  width: 50%;
   background-color: #ccd5fa;
   padding: 40px;
   box-sizing: border-box;
