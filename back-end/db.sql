@@ -1,11 +1,11 @@
-CREATE TABLE usuarios (
+CREATE TABLE produtos (
     id SERIAL PRIMARY KEY,
     nome TEXT,
     quantidade TEXT,
     info TEXT
 );
 
-INSERT INTO usuarios (nome, quantidade, info) VALUES
+INSERT INTO produtos (nome, quantidade, info) VALUES
     ('Geladeira Brastemp', '5', 'Indisponível'),
     ('Ar Split Electrolux', '8', 'Disponível'),
     ('Freezer Consul', '3', 'Indisponível'),

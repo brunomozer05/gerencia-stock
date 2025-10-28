@@ -1,7 +1,7 @@
 import { db } from "../db.js";
 
-export const getUsers = (_, res) => {
-  const q = "SELECT * FROM usuarios;";
+export const getProducts = (_, res) => { 
+  const q = "SELECT * FROM produtos;"; 
 
   db.query(q, (err, data) => {
     if (err) return res.status(500).json(err);
@@ -10,9 +10,10 @@ export const getUsers = (_, res) => {
   });
 };
 
-export const createUser = (req, res) => {
+export const createProduct = (req, res) => {
   const { nome, quantidade, info } = req.body;
-  const query = `INSERT INTO usuarios (nome, quantidade, info) VALUES ('${nome}', '${quantidade}', '${info}') RETURNING id`;
+  
+  const query = `INSERT INTO produtos (nome, quantidade, info) VALUES ('${nome}', '${quantidade}', '${info}') RETURNING id`;
 
   db.query(query, (err, data) => {
     if (err) return res.status(500).json(err);
@@ -21,9 +22,10 @@ export const createUser = (req, res) => {
   });
 };
 
-export const updateUser = (req, res) => {
+export const updateProduct = (req, res) => { 
   const { nome, quantidade, info } = req.body;
-  const query = `UPDATE usuarios SET nome = '${nome}', quantidade = '${quantidade}', info = '${info}' WHERE id = ${req.params.id} RETURNING id`;
+ 
+  const query = `UPDATE produtos SET nome = '${nome}', quantidade = '${quantidade}', info = '${info}' WHERE id = ${req.params.id} RETURNING id`;
 
   db.query(query, (err, data) => {
     if (err) return res.status(500).json(err);
@@ -32,8 +34,9 @@ export const updateUser = (req, res) => {
   });
 };
 
-export const deleteUser = (req, res) => {
-  const query = `DELETE FROM usuarios WHERE id = ${req.params.id}`;
+export const deleteProduct = (req, res) => { 
+  
+  const query = `DELETE FROM produtos WHERE id = ${req.params.id}`;
 
   db.query(query, (err, data) => {
     if (err) return res.status(500).json(err);
@@ -42,8 +45,9 @@ export const deleteUser = (req, res) => {
   });
 };
 
-export const countUsers = (_, res) => {
-  const query = `SELECT COUNT(*) FROM usuarios;`;
+export const countProducts = (_, res) => {
+
+  const query = `SELECT COUNT(*) FROM produtos;`;
 
   db.query(query, (err, data) => {
     if (err) return res.status(500).json(err);

@@ -12,7 +12,7 @@ export const db = new Client({
 
 db.connect();
 
-db.query(`Select * from usuarios`, (err, res) => {
+db.query(`Select * from produtos`, (err, res) => {
   if (!err) {
     console.log(res.rows);
   } else {
