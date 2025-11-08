@@ -16,3 +16,11 @@ INSERT INTO produtos (nome, quantidade, info) VALUES
     ('Freezer Esmaltec', '3', 'Indisponível'),
     ('Geladeira Panasonic', '5', 'Disponível'),
     ('Ar Portátil Philco', '2', 'Indisponível');
+
+CREATE TABLE usuarios (
+    id SERIAL PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    senha VARCHAR(255) NOT NULL, 
+    data_criacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
