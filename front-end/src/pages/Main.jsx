@@ -36,7 +36,42 @@ import {
     SocialLinks
 } from "../components/MainStyle";
 
+import { useState } from "react";
+import axios from "axios";
+
 const Main = () => {
+    const [loginData, setLoginData] = useState({
+        email: "",
+        senha: "",
+    });
+
+    const [loginError, setLoginError] = useState(null);
+    const handleLoginChange = (e) => {
+        setLoginData({ ...loginData, [e.target.name]: e.target.value });
+    };
+
+
+    const handleLoginSubmit = async (e) => {
+        e.preventDefault();
+        setLoginError(null);
+
+        if (!loginData.email || !loginData.senha) {
+            return setLoginError("Por favor, preencha o email e a senha.");
+        }
+
+        try {
+            await axios.post("http://localhost:8080/auth/signin", loginData, {
+                withCredentials: true
+            });
+
+
+            window.location.href = "/dashboard";
+
+        } catch (err) {
+            setLoginError(err.response?.data || "Ocorreu um erro no login.");
+        }
+    };
+
     return (
         <>
             <GlobalStyle />
@@ -72,18 +107,43 @@ const Main = () => {
                 <Right1>
                     <Box>
                         <LoginTitle>Login</LoginTitle>
-                        <Inputs>
-                            <label htmlFor="user-input">Usuário</label>
-                            <BlueInput id="user-input" type="text" />
-                            
-                            <label htmlFor="pass-input">Senha</label>
-                            <WhiteInput id="pass-input" type="password" />
-                        </Inputs>
-                        
-                        <a href="/dashboard" style={{ textDecoration: 'none', width: '100%', maxWidth: '200px' }}>
-                            <SaibaButton style={{ width: '100%', marginTop: 0 }} type="submit">Entrar</SaibaButton>
-                        </a>
-                        
+
+
+                        <form onSubmit={handleLoginSubmit} style={{ width: '100%', maxWidth: '200px' }}>
+                            <Inputs>
+
+                                <label htmlFor="email-input">Email</label>
+                                <BlueInput
+                                    id="email-input"
+                                    type="email"
+                                    name="email"
+                                    value={loginData.email}
+                                    onChange={handleLoginChange}
+                                />
+
+
+                                <label htmlFor="pass-input">Senha</label>
+                                <WhiteInput
+                                    id="pass-input"
+                                    type="password"
+                                    name="senha"
+                                    value={loginData.senha}
+                                    onChange={handleLoginChange}
+                                />
+                            </Inputs>
+
+
+                            {loginError && <p style={{ color: 'red', fontSize: '0.9rem', textAlign: 'center', marginBottom: '10px', width: '200px' }}>{loginError}</p>}
+
+
+                            <SaibaButton
+                                style={{ width: '100%', marginTop: 0 }}
+                                type="submit"
+                            >
+                                Entrar
+                            </SaibaButton>
+                        </form>
+
                         <ForgotPassword>
                             Esqueceu o seu usuário ou senha?
                         </ForgotPassword>
