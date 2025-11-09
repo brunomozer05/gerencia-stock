@@ -18,7 +18,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:8080/");
+        const response = await axios.get("https://gerencia-stock-back.onrender.com/");
         console.log(response.data);
         const fetchedData = response.data.map((item) => ({
           name: item.nome,

@@ -8,7 +8,7 @@ const Dashboard = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8080/")
+      .get("https://gerencia-stock-back.onrender.com/")
       .then((response) => {
         const uniqueCategories = [
           ...new Set(response.data.map((item) => item.info)),

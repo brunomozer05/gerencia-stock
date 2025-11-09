@@ -60,7 +60,7 @@ const Main = () => {
         }
 
         try {
-            await axios.post("http://localhost:8080/auth/signin", loginData, {
+            await axios.post("https://gerencia-stock-back.onrender.com/auth/signin", loginData, {
                 withCredentials: true
             });
 

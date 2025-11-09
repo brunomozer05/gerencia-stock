@@ -34,7 +34,7 @@ const Registro = () => {
     }
 
     try {
-      await axios.post("http://localhost:8080/auth/signup", formData);
+      await axios.post("https://gerencia-stock-back.onrender.com/auth/signup", formData);
 
       setSuccess("Registro realizado com sucesso! Você pode fazer login agora.");
 

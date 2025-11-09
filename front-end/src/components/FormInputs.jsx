@@ -29,7 +29,7 @@ const FormInputs = ({ editingId }) => {
 
   const onFinishCreate = async (values) => {
     try {
-      await axios.post("http://localhost:8080/", values, {
+      await axios.post("https://gerencia-stock-back.onrender.com/", values, {
         headers: {
           "Content-Type": "application/json",
         },
@@ -46,7 +46,7 @@ const FormInputs = ({ editingId }) => {
 
   const onFinishUpdate = async (values) => {
     try {
-      await axios.put(`http://localhost:8080/${editingId}`, values, {
+      await axios.put(`https://gerencia-stock-back.onrender.com/${editingId}`, values, {
         headers: {
           "Content-Type": "application/json",
         },

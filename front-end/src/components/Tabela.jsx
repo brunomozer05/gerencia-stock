@@ -19,7 +19,7 @@ const Tabela = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:8080");
+        const response = await fetch("https://gerencia-stock-back.onrender.com");
         const result = await response.json();
         setData(result);
         const formattedResult = result.map((item) => ({
@@ -28,7 +28,7 @@ const Tabela = () => {
         setFormattedData(formattedResult);
         setFilteredData(formattedResult);
 
-        await fetch("http://localhost:8080/count")
+        await fetch("https://gerencia-stock-back.onrender.com/count")
           .then((res) => res.json())
           .then((data) => setUserCount(data.count));
       } catch (error) {
@@ -41,12 +41,12 @@ const Tabela = () => {
 
   const handleDelete = async (userId) => {
     try {
-      const response = await fetch(`http://localhost:8080/${userId}`, {
+      const response = await fetch(`https://gerencia-stock-back.onrender.com/${userId}`, {
         method: "DELETE",
       });
 
       if (response.ok) {
-        await fetch("http://localhost:8080/count")
+        await fetch("https://gerencia-stock-back.onrender.com/count")
           .then((res) => res.json())
           .then((data) => setUserCount(data.count));
 
