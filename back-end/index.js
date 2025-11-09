@@ -13,7 +13,7 @@ app.use(cookieParser());
 app.use(cors({ 
   credentials: true, 
   
-  origin: "https://gerencia-stock-front.onrender.com/" 
+  origin: "https://gerencia-stock-front.onrender.com" 
 }));
 
 
