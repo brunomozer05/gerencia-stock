@@ -146,10 +146,6 @@ const Main = () => {
                                 Entrar
                             </SaibaButton>
                         </form>
-
-                        <ForgotPassword>
-                            Esqueceu o seu usuário ou senha?
-                        </ForgotPassword>
                     </Box>
                 </Right1>
             </Content1>
