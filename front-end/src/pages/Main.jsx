@@ -39,6 +39,8 @@ import {
 import { useState } from "react";
 import axios from "axios";
 
+import KeepAlive from "../components/KeepAlive";
+
 const Main = () => {
     const [loginData, setLoginData] = useState({
         email: "",
@@ -74,6 +76,7 @@ const Main = () => {
 
     return (
         <>
+        <KeepAlive/>
             <GlobalStyle />
             <Navbar>
                 <Title>
